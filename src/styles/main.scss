@@ -1,0 +1,45 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+
+body {
+  font-family: $font-stack;
+  color: $primary-color;
+  padding: multiply(10px, 2);
+}
+
+@for $i from 1 through 3 {
+  .column-#{$i} {
+    width: calc(100% / $i);
+  }
+}
+
+$theme: light;
+
+body {
+  @if $theme == light {
+    background: #fff;
+    color: #333;
+  } @else {
+    background: #333;
+    color: #fff;
+  }
+}
+
+$themes: (
+  light: #fff,
+  dark: #333,
+);
+
+@each $theme-name, $theme-color in $themes {
+  .theme-#{$theme-name} {
+    background: $theme-color;
+  }
+}
+
+.container {
+  @include flex-center;
+  @include responsive(mobile) {
+    background: $secondary-color;
+  }
+}

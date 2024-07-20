@@ -1,0 +1,44 @@
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss ***!
+  \***************************************************************************************************************/
+body {
+  font-family: helvetica, sans-serif;
+  color: #3498db;
+  padding: 20px;
+}
+
+.column-1 {
+  width: 100%;
+}
+
+.column-2 {
+  width: 50%;
+}
+
+.column-3 {
+  width: 33.3333333333%;
+}
+
+body {
+  background: #fff;
+  color: #333;
+}
+
+.theme-light {
+  background: #fff;
+}
+
+.theme-dark {
+  background: #333;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .container {
+    background: #2ecc71;
+  }
+}
